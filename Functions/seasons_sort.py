@@ -11,56 +11,44 @@ def map_to_season(month):
     else:
         return 'Winter'
 
-def seasons_sort(df, date_column):
+def seasons_sort(file_path, date_column, data_columns):
     """
-    Sort data by season based on a date column.
+    Extract data for each season from a CSV file with a date column.
 
     Parameters:
-        df (pd.DataFrame): The DataFrame containing the data.
-        date_column (str): The name of the date column.
+        file_path (str): Path to the CSV file.
+        date_column (str): Name of the column containing the date.
+        data_columns (list): List of column names to extract data from.
 
     Returns:
-        dict: A dictionary where keys are seasons and values are DataFrames with data for each season.
+        dict: A dictionary where keys are seasons, and values are arrays of data for each season.
     """
+    data_by_season = {}
 
-
-    # Mapping of months to seasons
-    #season_mapping = {
-
-        # 1: 'Winter',
-        # 2: 'Winter',
-        # 3: 'Spring',
-        # 4: 'Spring',
-        # 5: 'Spring',
-        # 6: 'Summer',
-        # 7: 'Summer',
-        # 8: 'Summer',
-        # 9: 'Fall',
-        # 10: 'Fall',
-        # 11: 'Fall',
-        # 12: 'Winter'
-    #}
+    # Read the CSV file
+    df = pd.read_csv(file_path, encoding='ISO-8859-1')
 
     # Convert the date column to a datetime object
-    print ('Date Column: ',(date_column))
-    print ('df: ', (df))
-    print ('df[date_column]: ', (df[date_column]))
-    #print (pd.to_datetime(df[date_column]))
     df[date_column] = pd.to_datetime(df[date_column])
 
-    # Extract the month from the date column
+    # Extract the month from the date column and store it in a new column 'Month'
     df['Month'] = df[date_column].dt.month
 
-    # Apply the season mapping to create a 'Season' column
-    df['Season'] = map_to_season(df['Month'])
-    #df['Season'] = df['Month'].map(season_mapping)
+    # Iterate through unique months
+    unique_months = df['Month'].unique()
 
-    # Sort the DataFrame by 'Season' and 'Date'
-    df = df.sort_values(by=['Season', date_column])
+    # Sort months by season using map_to_season function
+    for month in unique_months:
+        # Assign seasons to the data
+        season = map_to_season(month)
 
-    # Split the DataFrame into separate DataFrames for each season
-    seasons_data = {}
-    for season, season_df in df.groupby('Season'):
-        seasons_data[season] = season_df.drop(['Month', 'Season'], axis=1)
+        # Filter the DataFrame for the current season
+        season_data = df[df['Month'] == month][data_columns]
 
-    return seasons_data
+        # Convert the filtered DataFrame to a NumPy array
+        season_data_array = season_data.to_numpy()
+
+        # Store the data array in the dictionary with the season as the key
+        data_by_season[season] = season_data_array
+
+    return data_by_season

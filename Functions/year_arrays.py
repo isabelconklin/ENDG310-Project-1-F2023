@@ -18,11 +18,15 @@ def make_year_arrays(file_path, date_column, data_columns):
     # Read the CSV file
     df = pd.read_csv(file_path, encoding='ISO-8859-1')
 
-    # Convert the date column to a datetime object
-    df[date_column] = pd.to_datetime(df[date_column])
+    if date_column == 'Date':
+        # Convert the date column to a datetime object
+        df[date_column] = pd.to_datetime(df[date_column])
 
-    # Extract the year from the date column and store it in a new column
-    df['Year'] = df[date_column].dt.year
+        # Extract the year from the date column and store it in a new column
+        df['Year'] = df[date_column].dt.year
+
+    else:
+        df['Year'] = df[date_column]   
 
     # Iterate through unique years
     unique_years = df['Year'].unique()
