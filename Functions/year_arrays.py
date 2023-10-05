@@ -14,8 +14,13 @@ def make_year_arrays(file_path, date_column, data_columns):
         dict: A dictionary where keys are years, and values are arrays of data for each year.
     """
     data_by_year = {}
+    
+    # if file_path == csv:
+    #     # Read the CSV file
+    #     df = pd.read_csv(file_path, encoding='ISO-8859-1')
+    # else:
+    #     pass
 
-    # Read the CSV file
     df = pd.read_csv(file_path, encoding='ISO-8859-1')
 
     if date_column == 'Date':
