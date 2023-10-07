@@ -29,7 +29,7 @@ def create_wages_line_graph(filtered_data):
 
     # Create a line plot
     plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-    plt.plot(years, average_wage_by_year, marker='o', linestyle='-')
+    plt.plot(years, average_wage_by_year, color='tomato', marker='o', linestyle='-')
 
     # Customize the plot labels and title
     plt.xlabel('Year')
