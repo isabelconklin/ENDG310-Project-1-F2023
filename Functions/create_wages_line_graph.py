@@ -39,5 +39,6 @@ def create_wages_line_graph(filtered_data):
     # Show the grid
     plt.grid(True)
 
-    # Display the plot
+    # Display and save the plot
+    plt.savefig('Images/wages_line_graph.png')
     plt.show()

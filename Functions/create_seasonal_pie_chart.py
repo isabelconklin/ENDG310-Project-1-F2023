@@ -27,6 +27,6 @@ def create_seasonal_pie_chart(data_by_season):
     plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
     plt.title('Number of People Visiting Canada Seasonally')
-
+    plt.savefig('Images/seasons_piechart.png')
     plt.show()
 

@@ -25,4 +25,5 @@ def create_bar_chart(data_by_year):
     plt.xlabel('Year')
     plt.ylabel('Number of Tourists (millions)')
     plt.title('Number of People Entering Canada by Year (2018-2023)')
+    plt.savefig('Images/tourismbarchart.png')
     plt.show()
