@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
+# Prompt used in ChatGPT: I would like to make a line graph plotting the average wage for all the jobs in the filtered data combined on the y axis and years on the x axis. How would I do this?
 def create_wages_line_graph(filtered_data):
     """
     Create a line graph of the average wage for tourism-related jobs over the years.
@@ -40,5 +40,4 @@ def create_wages_line_graph(filtered_data):
     plt.grid(True)
 
     # Display and save the plot
-    plt.savefig('Images/wages_line_graph.png')
     plt.show()

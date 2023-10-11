@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+# Prompt used in ChatGPT: I would like to create a pie chart showing the amount of people entering canada seasonally, I have some code from an old project which I would like to use as a base, could you help me do this?
 def create_seasonal_pie_chart(data_by_season):
     """
     Create a pie chart showing the distribution of people entering Canada by season.

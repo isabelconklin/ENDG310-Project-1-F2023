@@ -1,5 +1,5 @@
 import csv
-
+# Prompt used in ChatGPT: How to add a column to a csv file
 def add_year_column(input_file, output_file, new_column_name, new_column_values):
     """
     Add a year column to an existing csv file

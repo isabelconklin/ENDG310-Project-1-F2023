@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+# Prompt used in ChatGPT: I have some data showing wages for the years 2018-2022 and I would like to filter it so that I only have the wages for jobs impacted by tourism, how could I make a function for this?
 def filter_jobs_impacted_by_tourism(data, tourism_keywords):
     """
     Filter a dataset to include only jobs impacted by tourism based on specified keywords.

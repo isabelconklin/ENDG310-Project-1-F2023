@@ -41,3 +41,6 @@ When I originally started making my graphs using matplotlib, I put all of my wor
 Finally, throughout this project I explored the conectino between the wages of individuals working jobs impacted by tourism and tourism itself. I have discovered that while there is a correlation between the two, it is not particularily strong. 
 
 ## References
+1.  Secretariat TB of C, Secretariat TB of C. Traveller volumes by port of entry and month - Open Government Portal. https://open.canada.ca/data/en/dataset/1b1c2b92-b388-47d9-87d4-01aee8d3c3e4. Accessed October 11, 2023.
+
+2.  Secretariat TB of C, Secretariat TB of C. Wages - open government portal. https://open.canada.ca/data/en/dataset/adad580f-76b0-4502-bd05-20c125de9116. Accessed October 11, 2023.

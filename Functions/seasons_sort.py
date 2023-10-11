@@ -1,5 +1,5 @@
 import pandas as pd
-
+# Prompt used in ChatGPT: I would like to make a function that will sort the data by season using the date. How would I do this?
 # Make a function to define seasons
 def map_to_season(month):
     if 3 <= month <= 5:

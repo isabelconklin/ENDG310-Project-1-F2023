@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+# Prompt used in ChatGPT: I would like to create a function to plot a graph which will have 2 datasets. One will be the tourism dataset and the other will be the wages dataset. What kind of graph should I use? 
 
 def wages_tourism_graph(tourism_data, wage_data):
     """

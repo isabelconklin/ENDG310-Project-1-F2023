@@ -1,6 +1,6 @@
 import pandas as pd
 #import numpy as np
-
+# Prompt used in ChatGPT: I like to make arrays for each year in my csv files, I would like to make a function which I can use for all my csv files, even if the columns aren't exactly the same. How would I do this?
 def make_year_arrays(file_path, date_column, data_columns):
     """
     Extract data for each year from a CSV file with a date column.
