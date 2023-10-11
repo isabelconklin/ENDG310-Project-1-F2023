@@ -30,7 +30,7 @@ The next step was to plot the graphs. I originally decided to plot my graphs usi
 
 The last step in my project was to create my infographic. I decided to use the last four graphs that I created (they are in the python notebook called Ploty_Graphs) in my infographic. I save these files as png or html files so that I could imbed them in my infographic. I made the infographic as a html file as well. In order to access the web version of my infographic on your computer, go into Project_1_Notebook to the infograpic section and run the cell. Then it will save the html file to infographic.html. Then copy the filepath and paste it into a web browser. It should then bring you to the infographic. Below I am including a pdf version of my infographic.
 
-[Infographic pdf]("Tourism and Wages in Canada.pdf")
+<img src="Images/Tourism and Wages in Canada.pdf">
 
 ## Code Organization
 
